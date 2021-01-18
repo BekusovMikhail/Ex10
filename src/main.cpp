@@ -1,9 +1,15 @@
-// Copyright 2020 A.SHT
-#include <iostream>
-#include <string>
+// Copyright 2021 Bekusov Mikhail
 
+#include <iostream>
 #include "postfix.h"
 
 int main() {
-  return 0;
+    std::cout << infix2postfix("(1 + 200)") << std::endl;
+    std::cout << infix2postfix("(10 + 10 + 10 * 10)") << std::endl;
+    std::cout << infix2postfix("550 - 362 * 152 + 250") << std::endl;
+    std::cout << infix2postfix("56465 - 564 + 62 * 15 / 65 - 56 / 51") << std::endl;
+    std::cout << infix2postfix("56465 - (564 + 62) * 15 / (65 - 56) / 51") << std::endl;
+    std::cout << infix2postfix("(52 * (15 - 25) / (36 + 43) - 85 * (250 - 89))") << std::endl;
+    std::cout << infix2postfix("52 * 15 - 25 / 36 + 43 - 85 * 250 - 89") << std::endl;
+    return 0;
 }
